@@ -3,6 +3,9 @@ import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
+  //Agregamos esta propiedad para tener una referencia al nombre de la pantalla
+  //en el router de nuestra aplicacion.
+  static const String name = 'home_screen';
   const HomeScreen({super.key});
 
   @override
@@ -44,9 +47,11 @@ class _CustomListTile extends StatelessWidget {
         menuItem.subTitle,
       ),
       onTap: () {
+        //Cambiamos de pantalla en base a una ruta de nuestro router.
         context.push(menuItem.link);
 
-        // Navigator.pushNamed(context, menuItem.link);
+        //Cambiamos de pantalla en base a un nombre de nuestro router.
+        // context.pushNamed(CardsScreen.name);
       },
     );
   }
