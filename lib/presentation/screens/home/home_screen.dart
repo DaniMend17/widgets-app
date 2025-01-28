@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/presentation/screens/buttons/buttons_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -22,27 +23,28 @@ class HomeScreen extends StatelessWidget {
 }
 
 class _CustomListTile extends StatelessWidget {
+  final MenuItem menuItem;
+
   const _CustomListTile({
     required this.menuItem,
   });
 
-  final MenuItem menuItem;
-
   @override
   Widget build(BuildContext context) {
-    
     final Color colorTheme = Theme.of(context).primaryColor;
 
     return ListTile(
       iconColor: colorTheme,
-      leading: Icon(menuItem.icon,),
+      leading: Icon(
+        menuItem.icon,
+      ),
       trailing: Icon(Icons.arrow_forward_ios_rounded),
       title: Text(menuItem.title),
       subtitle: Text(
         menuItem.subTitle,
       ),
       onTap: () {
-        
+        Navigator.pushNamed(context, menuItem.link);
       },
     );
   }
