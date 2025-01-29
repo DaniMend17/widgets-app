@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: ListView.builder(
         itemCount: appMenuItems.length,
-        itemBuilder: (BuildContext context, int index) {
+        itemBuilder: (context, index) {
           final MenuItem menuItem = appMenuItems[index];
           return _CustomListTile(menuItem: menuItem);
         },
