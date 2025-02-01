@@ -9,7 +9,7 @@ class ButtonsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Buttons Screen'),
+        title: const Text('buttons_screen'),
       ),
       body: _ButtonsView(),
       floatingActionButton: IconButton(
