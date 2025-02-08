@@ -32,10 +32,16 @@ const List<MenuItem> appMenuItems = [
       link: '/progress',
       icon: Icons.refresh_rounded
   ),
-    MenuItem(
+  MenuItem(
       title: 'SnackBars',
       subTitle: 'snackbars',
       link: '/snackbars',
       icon: Icons.info_outline
   ),
+  MenuItem(
+    title: 'Ui Controls', 
+    subTitle: 'uiControls', 
+    link: '/ui-controls', 
+    icon: Icons.pest_control_sharp
+  )
 ];
