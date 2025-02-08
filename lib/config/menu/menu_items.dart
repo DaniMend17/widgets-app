@@ -43,5 +43,11 @@ const List<MenuItem> appMenuItems = [
     subTitle: 'uiControls', 
     link: '/ui-controls', 
     icon: Icons.pest_control_sharp
-  )
+  ),
+  MenuItem(
+    title: 'Tutorial', 
+    subTitle: 'tutorial de aplicación', 
+    link: '/tutorial', 
+    icon: Icons.smart_display_rounded
+  ),
 ];
