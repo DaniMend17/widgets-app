@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:widgets_app/config/menu/menu_items.dart';
+import 'package:widgets_app/presentation/widgets/slide_menu.dart';
 
 class HomeScreen extends StatelessWidget {
   //Agregamos esta propiedad para tener una referencia al nombre de la pantalla
@@ -12,7 +13,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Widgets en Flutter'),
+        title: const Text('Flutter + Material App'),
       ),
       body: ListView.builder(
         itemCount: appMenuItems.length,
@@ -21,6 +22,7 @@ class HomeScreen extends StatelessWidget {
           return _CustomListTile(menuItem: menuItem);
         },
       ),
+      drawer: SlideMenu()
     );
   }
 }

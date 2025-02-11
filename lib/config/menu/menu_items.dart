@@ -50,4 +50,10 @@ const List<MenuItem> appMenuItems = [
     link: '/tutorial', 
     icon: Icons.smart_display_rounded
   ),
+  MenuItem(
+    title: 'Infinite scroll', 
+    subTitle: 'infinite scroll', 
+    link: '/infinite', 
+    icon: Icons.ad_units_rounded
+  ),
 ];
