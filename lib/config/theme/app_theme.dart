@@ -9,7 +9,7 @@ const List<Color> colorList = <Color>[
 
 class AppTheme {
   final int selectedColor;
-  bool isDarkMode;
+  final bool isDarkMode;
 
   AppTheme({this.selectedColor = 0, this.isDarkMode = false})
       : assert(selectedColor >= 0 && selectedColor < colorList.length,
@@ -23,4 +23,10 @@ class AppTheme {
       // backgroundColor: colorList[selectedColor]
     )
   );
+
+  AppTheme copyWith({int? selectedColor, bool? isDarkMode}) => AppTheme(
+    selectedColor: selectedColor ?? this.selectedColor,
+    isDarkMode: isDarkMode ?? this.isDarkMode
+  );
+
 }
