@@ -11,7 +11,11 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //Creamos una llave para identificar este Scaffold y para también poder obtener
+    //el estado de sus elementos, en este caso nos interesa el drawer.
+    final scaffoldKey = GlobalKey<ScaffoldState>();
     return Scaffold(
+      key: scaffoldKey,
       appBar: AppBar(
         title: const Text('Flutter + Material App'),
       ),
@@ -22,7 +26,7 @@ class HomeScreen extends StatelessWidget {
           return _CustomListTile(menuItem: menuItem);
         },
       ),
-      drawer: SlideMenu()
+      drawer: SlideMenu(scaffoldKey: scaffoldKey,)
     );
   }
 }
